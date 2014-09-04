@@ -21,6 +21,7 @@
 		24B5C49419B8C5B000C5E96C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47619B8C5B000C5E96C /* UIKit.framework */; };
 		24B5C49C19B8C5B000C5E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C49A19B8C5B000C5E96C /* InfoPlist.strings */; };
 		24B5C49E19B8C5B000C5E96C /* FindMyPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */; };
+		24B5C4A919B8C5E000C5E96C /* LPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C4A819B8C5E000C5E96C /* LPLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		24B5C49919B8C5B000C5E96C /* FindMyPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindMyPhoneTests-Info.plist"; sourceTree = "<group>"; };
 		24B5C49B19B8C5B000C5E96C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMyPhoneTests.m; sourceTree = "<group>"; };
+		24B5C4A719B8C5E000C5E96C /* LPLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPLocationManager.h; sourceTree = "<group>"; };
+		24B5C4A819B8C5E000C5E96C /* LPLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				24B5C48819B8C5B000C5E96C /* LPViewController.m */,
 				24B5C48A19B8C5B000C5E96C /* Images.xcassets */,
 				24B5C47919B8C5B000C5E96C /* Supporting Files */,
+				24B5C4A719B8C5E000C5E96C /* LPLocationManager.h */,
+				24B5C4A819B8C5E000C5E96C /* LPLocationManager.m */,
 			);
 			path = FindMyPhone;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			files = (
 				24B5C48319B8C5B000C5E96C /* LPAppDelegate.m in Sources */,
 				24B5C47F19B8C5B000C5E96C /* main.m in Sources */,
+				24B5C4A919B8C5E000C5E96C /* LPLocationManager.m in Sources */,
 				24B5C48919B8C5B000C5E96C /* LPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

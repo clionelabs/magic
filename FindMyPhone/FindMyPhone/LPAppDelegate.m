@@ -7,12 +7,16 @@
 //
 
 #import "LPAppDelegate.h"
+#import "LPLocationManager.h"
 
+@interface LPAppDelegate ()
+@property (nonatomic, strong) LPLocationManager *locationManager;
+@end
 @implementation LPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.locationManager = [[LPLocationManager alloc] init];
     return YES;
 }
 							
