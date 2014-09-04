@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24B5C47319B8C5B000C5E96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47219B8C5B000C5E96C /* Foundation.framework */; };
+		24B5C47519B8C5B000C5E96C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47419B8C5B000C5E96C /* CoreGraphics.framework */; };
+		24B5C47719B8C5B000C5E96C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47619B8C5B000C5E96C /* UIKit.framework */; };
+		24B5C47D19B8C5B000C5E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C47B19B8C5B000C5E96C /* InfoPlist.strings */; };
+		24B5C47F19B8C5B000C5E96C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C47E19B8C5B000C5E96C /* main.m */; };
+		24B5C48319B8C5B000C5E96C /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C48219B8C5B000C5E96C /* LPAppDelegate.m */; };
+		24B5C48619B8C5B000C5E96C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C48419B8C5B000C5E96C /* Main.storyboard */; };
+		24B5C48919B8C5B000C5E96C /* LPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C48819B8C5B000C5E96C /* LPViewController.m */; };
+		24B5C48B19B8C5B000C5E96C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C48A19B8C5B000C5E96C /* Images.xcassets */; };
+		24B5C49219B8C5B000C5E96C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C49119B8C5B000C5E96C /* XCTest.framework */; };
+		24B5C49319B8C5B000C5E96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47219B8C5B000C5E96C /* Foundation.framework */; };
+		24B5C49419B8C5B000C5E96C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C47619B8C5B000C5E96C /* UIKit.framework */; };
+		24B5C49C19B8C5B000C5E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C49A19B8C5B000C5E96C /* InfoPlist.strings */; };
+		24B5C49E19B8C5B000C5E96C /* FindMyPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24B5C49519B8C5B000C5E96C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24B5C46719B8C5B000C5E96C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24B5C46E19B8C5B000C5E96C;
+			remoteInfo = FindMyPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24B5C46F19B8C5B000C5E96C /* FindMyPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24B5C47219B8C5B000C5E96C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24B5C47419B8C5B000C5E96C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		24B5C47619B8C5B000C5E96C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24B5C47A19B8C5B000C5E96C /* FindMyPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindMyPhone-Info.plist"; sourceTree = "<group>"; };
+		24B5C47C19B8C5B000C5E96C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24B5C47E19B8C5B000C5E96C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24B5C48019B8C5B000C5E96C /* FindMyPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FindMyPhone-Prefix.pch"; sourceTree = "<group>"; };
+		24B5C48119B8C5B000C5E96C /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
+		24B5C48219B8C5B000C5E96C /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
+		24B5C48519B8C5B000C5E96C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24B5C48719B8C5B000C5E96C /* LPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPViewController.h; sourceTree = "<group>"; };
+		24B5C48819B8C5B000C5E96C /* LPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPViewController.m; sourceTree = "<group>"; };
+		24B5C48A19B8C5B000C5E96C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24B5C49019B8C5B000C5E96C /* FindMyPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMyPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24B5C49119B8C5B000C5E96C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		24B5C49919B8C5B000C5E96C /* FindMyPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FindMyPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		24B5C49B19B8C5B000C5E96C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMyPhoneTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24B5C46C19B8C5B000C5E96C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C47519B8C5B000C5E96C /* CoreGraphics.framework in Frameworks */,
+				24B5C47719B8C5B000C5E96C /* UIKit.framework in Frameworks */,
+				24B5C47319B8C5B000C5E96C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B5C48D19B8C5B000C5E96C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C49219B8C5B000C5E96C /* XCTest.framework in Frameworks */,
+				24B5C49419B8C5B000C5E96C /* UIKit.framework in Frameworks */,
+				24B5C49319B8C5B000C5E96C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24B5C46619B8C5B000C5E96C = {
+			isa = PBXGroup;
+			children = (
+				24B5C47819B8C5B000C5E96C /* FindMyPhone */,
+				24B5C49719B8C5B000C5E96C /* FindMyPhoneTests */,
+				24B5C47119B8C5B000C5E96C /* Frameworks */,
+				24B5C47019B8C5B000C5E96C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24B5C47019B8C5B000C5E96C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C46F19B8C5B000C5E96C /* FindMyPhone.app */,
+				24B5C49019B8C5B000C5E96C /* FindMyPhoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24B5C47119B8C5B000C5E96C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C47219B8C5B000C5E96C /* Foundation.framework */,
+				24B5C47419B8C5B000C5E96C /* CoreGraphics.framework */,
+				24B5C47619B8C5B000C5E96C /* UIKit.framework */,
+				24B5C49119B8C5B000C5E96C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24B5C47819B8C5B000C5E96C /* FindMyPhone */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C48119B8C5B000C5E96C /* LPAppDelegate.h */,
+				24B5C48219B8C5B000C5E96C /* LPAppDelegate.m */,
+				24B5C48419B8C5B000C5E96C /* Main.storyboard */,
+				24B5C48719B8C5B000C5E96C /* LPViewController.h */,
+				24B5C48819B8C5B000C5E96C /* LPViewController.m */,
+				24B5C48A19B8C5B000C5E96C /* Images.xcassets */,
+				24B5C47919B8C5B000C5E96C /* Supporting Files */,
+			);
+			path = FindMyPhone;
+			sourceTree = "<group>";
+		};
+		24B5C47919B8C5B000C5E96C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C47A19B8C5B000C5E96C /* FindMyPhone-Info.plist */,
+				24B5C47B19B8C5B000C5E96C /* InfoPlist.strings */,
+				24B5C47E19B8C5B000C5E96C /* main.m */,
+				24B5C48019B8C5B000C5E96C /* FindMyPhone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24B5C49719B8C5B000C5E96C /* FindMyPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */,
+				24B5C49819B8C5B000C5E96C /* Supporting Files */,
+			);
+			path = FindMyPhoneTests;
+			sourceTree = "<group>";
+		};
+		24B5C49819B8C5B000C5E96C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24B5C49919B8C5B000C5E96C /* FindMyPhoneTests-Info.plist */,
+				24B5C49A19B8C5B000C5E96C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24B5C46E19B8C5B000C5E96C /* FindMyPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24B5C4A119B8C5B000C5E96C /* Build configuration list for PBXNativeTarget "FindMyPhone" */;
+			buildPhases = (
+				24B5C46B19B8C5B000C5E96C /* Sources */,
+				24B5C46C19B8C5B000C5E96C /* Frameworks */,
+				24B5C46D19B8C5B000C5E96C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindMyPhone;
+			productName = FindMyPhone;
+			productReference = 24B5C46F19B8C5B000C5E96C /* FindMyPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24B5C48F19B8C5B000C5E96C /* FindMyPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24B5C4A419B8C5B000C5E96C /* Build configuration list for PBXNativeTarget "FindMyPhoneTests" */;
+			buildPhases = (
+				24B5C48C19B8C5B000C5E96C /* Sources */,
+				24B5C48D19B8C5B000C5E96C /* Frameworks */,
+				24B5C48E19B8C5B000C5E96C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24B5C49619B8C5B000C5E96C /* PBXTargetDependency */,
+			);
+			name = FindMyPhoneTests;
+			productName = FindMyPhoneTests;
+			productReference = 24B5C49019B8C5B000C5E96C /* FindMyPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24B5C46719B8C5B000C5E96C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Loop Pulse";
+				TargetAttributes = {
+					24B5C48F19B8C5B000C5E96C = {
+						TestTargetID = 24B5C46E19B8C5B000C5E96C;
+					};
+				};
+			};
+			buildConfigurationList = 24B5C46A19B8C5B000C5E96C /* Build configuration list for PBXProject "FindMyPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24B5C46619B8C5B000C5E96C;
+			productRefGroup = 24B5C47019B8C5B000C5E96C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24B5C46E19B8C5B000C5E96C /* FindMyPhone */,
+				24B5C48F19B8C5B000C5E96C /* FindMyPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24B5C46D19B8C5B000C5E96C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C48B19B8C5B000C5E96C /* Images.xcassets in Resources */,
+				24B5C47D19B8C5B000C5E96C /* InfoPlist.strings in Resources */,
+				24B5C48619B8C5B000C5E96C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B5C48E19B8C5B000C5E96C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C49C19B8C5B000C5E96C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24B5C46B19B8C5B000C5E96C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C48319B8C5B000C5E96C /* LPAppDelegate.m in Sources */,
+				24B5C47F19B8C5B000C5E96C /* main.m in Sources */,
+				24B5C48919B8C5B000C5E96C /* LPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B5C48C19B8C5B000C5E96C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B5C49E19B8C5B000C5E96C /* FindMyPhoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24B5C49619B8C5B000C5E96C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24B5C46E19B8C5B000C5E96C /* FindMyPhone */;
+			targetProxy = 24B5C49519B8C5B000C5E96C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24B5C47B19B8C5B000C5E96C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24B5C47C19B8C5B000C5E96C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24B5C48419B8C5B000C5E96C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24B5C48519B8C5B000C5E96C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		24B5C49A19B8C5B000C5E96C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24B5C49B19B8C5B000C5E96C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24B5C49F19B8C5B000C5E96C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24B5C4A019B8C5B000C5E96C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24B5C4A219B8C5B000C5E96C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
+				INFOPLIST_FILE = "FindMyPhone/FindMyPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		24B5C4A319B8C5B000C5E96C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
+				INFOPLIST_FILE = "FindMyPhone/FindMyPhone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		24B5C4A519B8C5B000C5E96C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FindMyPhone.app/FindMyPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FindMyPhoneTests/FindMyPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		24B5C4A619B8C5B000C5E96C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FindMyPhone.app/FindMyPhone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
+				INFOPLIST_FILE = "FindMyPhoneTests/FindMyPhoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24B5C46A19B8C5B000C5E96C /* Build configuration list for PBXProject "FindMyPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B5C49F19B8C5B000C5E96C /* Debug */,
+				24B5C4A019B8C5B000C5E96C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24B5C4A119B8C5B000C5E96C /* Build configuration list for PBXNativeTarget "FindMyPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B5C4A219B8C5B000C5E96C /* Debug */,
+				24B5C4A319B8C5B000C5E96C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24B5C4A419B8C5B000C5E96C /* Build configuration list for PBXNativeTarget "FindMyPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B5C4A519B8C5B000C5E96C /* Debug */,
+				24B5C4A619B8C5B000C5E96C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24B5C46719B8C5B000C5E96C /* Project object */;
+}
