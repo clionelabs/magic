@@ -12,15 +12,15 @@
 
 - (void)push:(id)object
 {
-    [self addObject:object];
+    [self insertObject:object atIndex:0];
     [self trim];
 }
 
 - (id)pop
 {
-    id headObject = [self firstObject];
-    [self removeObjectAtIndex:0];
-    return headObject;
+    id lastObject = [self lastObject];
+    [self removeObjectIdenticalTo:lastObject];
+    return lastObject;
 }
 
 - (void)trim
