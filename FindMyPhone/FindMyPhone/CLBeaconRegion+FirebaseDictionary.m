@@ -13,6 +13,7 @@
 {
     return @{@"uuid": [self.proximityUUID UUIDString],
              @"major": self.major,
-             @"minor": self.minor};
+             @"minor": self.minor,
+             @"identifier": self.identifier};
 }
 @end
