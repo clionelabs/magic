@@ -7,12 +7,18 @@
 //
 
 #import "LPAppDelegate.h"
+#import "LPFinder.h"
+
+@interface LPAppDelegate ()
+@property (nonatomic, strong) LPFinder *finder;
+@end
 
 @implementation LPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.finder = [[LPFinder alloc] init];
     return YES;
 }
 							
