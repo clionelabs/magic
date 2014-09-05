@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24B5C4C919B96D0900C5E96C /* FindMyPhoneViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyPhoneViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24B5C4C919B96D0900C5E96C /* Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B5C4CC19B96D0900C5E96C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24B5C4CE19B96D0900C5E96C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		24B5C4D019B96D0900C5E96C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -119,7 +119,7 @@
 		24B5C4CA19B96D0900C5E96C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24B5C4C919B96D0900C5E96C /* FindMyPhoneViewer.app */,
+				24B5C4C919B96D0900C5E96C /* Viewer.app */,
 				24B5C4EA19B96D0900C5E96C /* FindMyPhoneViewerTests.xctest */,
 			);
 			name = Products;
@@ -207,7 +207,7 @@
 			);
 			name = FindMyPhoneViewer;
 			productName = FindMyPhoneViewer;
-			productReference = 24B5C4C919B96D0900C5E96C /* FindMyPhoneViewer.app */;
+			productReference = 24B5C4C919B96D0900C5E96C /* Viewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		24B5C4E919B96D0900C5E96C /* FindMyPhoneViewerTests */ = {
@@ -426,7 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindMyPhoneViewer/FindMyPhoneViewer-Prefix.pch";
 				INFOPLIST_FILE = "FindMyPhoneViewer/FindMyPhoneViewer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Viewer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -443,7 +443,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindMyPhoneViewer/FindMyPhoneViewer-Prefix.pch";
 				INFOPLIST_FILE = "FindMyPhoneViewer/FindMyPhoneViewer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Viewer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
