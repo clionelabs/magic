@@ -31,6 +31,7 @@
 		24B5C4B919B95EB400C5E96C /* LPDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C4B819B95EB400C5E96C /* LPDataStore.m */; };
 		24B5C4BE19B9667F00C5E96C /* CLBeaconRegion+FirebaseDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C4BA19B9667F00C5E96C /* CLBeaconRegion+FirebaseDictionary.m */; };
 		24B5C4BF19B9667F00C5E96C /* CLBeacon+FirebaseDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C4BC19B9667F00C5E96C /* CLBeacon+FirebaseDictionary.m */; };
+		24B5C51719B97C4600C5E96C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C51619B97C4600C5E96C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		24B5C4BB19B9667F00C5E96C /* CLBeaconRegion+FirebaseDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeaconRegion+FirebaseDictionary.h"; sourceTree = "<group>"; };
 		24B5C4BC19B9667F00C5E96C /* CLBeacon+FirebaseDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+FirebaseDictionary.m"; sourceTree = "<group>"; };
 		24B5C4BD19B9667F00C5E96C /* CLBeacon+FirebaseDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+FirebaseDictionary.h"; sourceTree = "<group>"; };
+		24B5C51619B97C4600C5E96C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B5C51719B97C4600C5E96C /* CoreLocation.framework in Frameworks */,
 				24B5C4B519B95D8B00C5E96C /* SystemConfiguration.framework in Frameworks */,
 				24B5C4B319B95D8200C5E96C /* Security.framework in Frameworks */,
 				24B5C4B119B95D7D00C5E96C /* CFNetwork.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		24B5C47119B8C5B000C5E96C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24B5C51619B97C4600C5E96C /* CoreLocation.framework */,
 				24B5C4B419B95D8B00C5E96C /* SystemConfiguration.framework */,
 				24B5C4B219B95D8200C5E96C /* Security.framework */,
 				24B5C4B019B95D7D00C5E96C /* CFNetwork.framework */,
