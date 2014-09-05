@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LPViewController : UIViewController
+@interface LPViewController : UIViewController <UIAlertViewDelegate>
+
 - (void)updateLocaiton:(NSDictionary *)location;
+- (IBAction)changeTitle:(UIButton *)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *blueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *greenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *purpleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *blueButton;
+@property (weak, nonatomic) IBOutlet UIButton *greenButton;
+@property (weak, nonatomic) IBOutlet UIButton *purpleButton;
+
 @end
