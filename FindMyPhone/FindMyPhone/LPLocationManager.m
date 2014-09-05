@@ -89,7 +89,8 @@
 
 - (NSArray *)filterByKnownProximities:(NSArray *)beacons
 {
-    NSArray *knownProximities = @[@(CLProximityImmediate), @(CLProximityNear), @(CLProximityFar)];
+    // Don't send anything "far"
+    NSArray *knownProximities = @[@(CLProximityImmediate), @(CLProximityNear)];
     NSPredicate *knownProximityPredicate = [NSPredicate predicateWithFormat:@"proximity IN %@", knownProximities];
     return [beacons filteredArrayUsingPredicate:knownProximityPredicate];
 }
