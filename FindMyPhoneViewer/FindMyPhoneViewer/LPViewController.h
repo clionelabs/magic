@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LPViewController : UIViewController
-
+- (void)updateLocaiton:(NSDictionary *)location;
+@property (weak, nonatomic) IBOutlet UILabel *blueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *greenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *purpleLabel;
 @end

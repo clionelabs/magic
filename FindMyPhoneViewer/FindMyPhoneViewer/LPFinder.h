@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface LPFinder : NSObject
+
 - (id)init;
-- (NSDictionary *)location;
+@property (nonatomic, readonly)NSDictionary *location;
+
 @end

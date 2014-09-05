@@ -9,17 +9,26 @@
 #import "LPFinder.h"
 #import <Firebase/Firebase.h>
 #import "NSMutableArray+Queue.h"
+#import <CoreLocation/CoreLocation.h>
+
+#import "LPAppDelegate.h"
+#import "LPViewController.h"
 
 @interface LPFinder ()
 @property (nonatomic, strong) Firebase *firebase;
 @property (nonatomic) NSMutableArray *buffer;
+@property (nonatomic, readonly) NSArray *beaconRegions;
 @end
 
 @implementation LPFinder
+@synthesize beaconRegions=_beaconRegions;
+@synthesize location=_location;
+
 - (id)init
 {
     self = [super init];
     if (self) {
+        _location = [NSDictionary dictionary];
         NSString *url = @"https://looppulse-dev-thomas.firebaseio.com";
         self.buffer = [[NSMutableArray alloc] init];
         self.firebase = [[Firebase alloc] initWithUrl:url];
@@ -28,18 +37,51 @@
     return self;
 }
 
+- (NSArray *)beaconRegions
+{
+    if (!_beaconRegions) {
+        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"A2DCA1E4-0607-4F37-9FF1-825237B278FE"];
+
+        CLBeaconRegion *blue  = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:1901 minor:12001 identifier:@"blue"];
+        CLBeaconRegion *green = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:214  minor:2104  identifier:@"green"];
+        CLBeaconRegion *purple= [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:1213 minor:14001 identifier:@"purple"];
+
+        _beaconRegions = [[NSArray alloc] initWithObjects:blue, green, purple, nil];
+    }
+    return _beaconRegions;
+}
+
 - (void)observeFirebase
 {
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        NSLog(@"%@", snapshot.value);
-        [self.buffer push:snapshot.value];
-        [snapshot.ref removeValue];
+        [self processEvent:snapshot];
     }];
 }
 
-- (NSDictionary *)location
+- (void)processEvent:(FDataSnapshot *)snapshot
 {
-    return [NSDictionary dictionary];
+    // use last didEnterRegion event
+    NSDictionary *event = snapshot.value;
+    NSString *type = [event objectForKey:@"type"];
+    if ([type isEqualToString: @"didEnterRegion"]) {
+        NSString *identifier = [event objectForKey:@"identifier"];
+        [self updateLocation:identifier];
+    }
+
+    [self.buffer push:snapshot.value];
+    [snapshot.ref removeValue];
+}
+
+- (void)updateLocation:(NSString *)newLocationIdentifier
+{
+    _location = @{@"identifier": newLocationIdentifier};
+    NSLog(@"Location: %@", self.location);
+
+    // Hacky way to update UI.
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    UIViewController *rootVC = window.rootViewController;
+    LPViewController *lpVC = (LPViewController *)rootVC;
+    [lpVC updateLocaiton:self.location];
 }
 
 @end

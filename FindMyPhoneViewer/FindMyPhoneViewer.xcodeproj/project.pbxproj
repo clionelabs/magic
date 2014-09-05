@@ -29,6 +29,7 @@
 		24B5C50C19B96D7500C5E96C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C50B19B96D7500C5E96C /* SystemConfiguration.framework */; };
 		24B5C50F19B96F0E00C5E96C /* LPFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C50E19B96F0E00C5E96C /* LPFinder.m */; };
 		24B5C51219B971EB00C5E96C /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C51119B971EB00C5E96C /* NSMutableArray+Queue.m */; };
+		24B5C51919B97C6600C5E96C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C51819B97C6600C5E96C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		24B5C50E19B96F0E00C5E96C /* LPFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPFinder.m; sourceTree = "<group>"; };
 		24B5C51019B971EB00C5E96C /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Queue.h"; sourceTree = "<group>"; };
 		24B5C51119B971EB00C5E96C /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
+		24B5C51819B97C6600C5E96C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B5C51919B97C6600C5E96C /* CoreLocation.framework in Frameworks */,
 				24B5C50C19B96D7500C5E96C /* SystemConfiguration.framework in Frameworks */,
 				24B5C50A19B96D6D00C5E96C /* Security.framework in Frameworks */,
 				24B5C50819B96D6700C5E96C /* CFNetwork.framework in Frameworks */,
@@ -125,6 +128,7 @@
 		24B5C4CB19B96D0900C5E96C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24B5C51819B97C6600C5E96C /* CoreLocation.framework */,
 				24B5C50B19B96D7500C5E96C /* SystemConfiguration.framework */,
 				24B5C50919B96D6D00C5E96C /* Security.framework */,
 				24B5C50719B96D6700C5E96C /* CFNetwork.framework */,
