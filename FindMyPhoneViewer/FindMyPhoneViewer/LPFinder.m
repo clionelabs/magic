@@ -63,20 +63,26 @@
     // use last didEnterRegion event
     NSDictionary *event = snapshot.value;
     NSString *type = [event objectForKey:@"type"];
-    if ([type isEqualToString: @"didEnterRegion"]) {
+    if ([type isEqualToString: @"didEnterRegion"] ||
+        [type isEqualToString: @"didExitRegion"]) {
         NSString *identifier = [event objectForKey:@"identifier"];
-        [self updateLocation:identifier];
+        [self updateLocation:identifier forType:type];
     }
 
     [self.buffer push:snapshot.value];
     [snapshot.ref removeValue];
 }
 
-- (void)updateLocation:(NSString *)newLocationIdentifier
+- (void)updateLocation:(NSString *)newLocationIdentifier forType:(NSString *)type
 {
-    _location = @{@"identifier": newLocationIdentifier};
+    _location = @{newLocationIdentifier: type};
     NSLog(@"Location: %@", self.location);
 
+    [self updateUI];
+}
+
+- (void)updateUI
+{
     // Hacky way to update UI.
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     UIViewController *rootVC = window.rootViewController;

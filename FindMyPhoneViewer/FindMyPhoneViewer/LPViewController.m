@@ -32,13 +32,27 @@
 
 - (void)updateLocaiton:(NSDictionary *)location
 {
-    // only show the label matching on the identifier.
-    NSString *identifier = [location objectForKey:@"identifier"];
+    NSString *identifier = [[location allKeys] firstObject];
+    NSString *type = [location objectForKey:identifier];
+
     [self.identifierToLabels enumerateKeysAndObjectsUsingBlock:^(NSString *key, UILabel *label, BOOL *stop){
         if ([key isEqualToString:identifier]) {
-            [label setHidden:NO];
-        } else {
-            [label setHidden:YES];
+            if ([type isEqualToString:@"didEnterRegion"]) {
+                [label setAlpha:1.0];
+                [label setHidden:NO];
+
+                // We just have one enter event. Grey out the others.
+                [self.identifierToLabels enumerateKeysAndObjectsUsingBlock:^(NSString *key2, UILabel *label2, BOOL *stop2){
+                    if (![key2 isEqualToString:identifier]) {
+                        [label2 setAlpha:0.2];
+                    }
+                }];
+
+            } else if ([type isEqualToString:@"didExitRegion"]) {
+                [label setHidden:YES];
+            } else {
+                NSLog(@"ERROR: key: %@, type: %@", identifier, type);
+            }
         }
     }];
 }
