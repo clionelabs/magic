@@ -22,6 +22,12 @@
 		24B5C49C19B8C5B000C5E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B5C49A19B8C5B000C5E96C /* InfoPlist.strings */; };
 		24B5C49E19B8C5B000C5E96C /* FindMyPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */; };
 		24B5C4A919B8C5E000C5E96C /* LPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B5C4A819B8C5E000C5E96C /* LPLocationManager.m */; };
+		24B5C4AB19B95D4A00C5E96C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4AA19B95D4A00C5E96C /* Firebase.framework */; };
+		24B5C4AD19B95D6F00C5E96C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4AC19B95D6F00C5E96C /* libicucore.dylib */; };
+		24B5C4AF19B95D7700C5E96C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4AE19B95D7700C5E96C /* libc++.dylib */; };
+		24B5C4B119B95D7D00C5E96C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4B019B95D7D00C5E96C /* CFNetwork.framework */; };
+		24B5C4B319B95D8200C5E96C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4B219B95D8200C5E96C /* Security.framework */; };
+		24B5C4B519B95D8B00C5E96C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B5C4B419B95D8B00C5E96C /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		24B5C49D19B8C5B000C5E96C /* FindMyPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMyPhoneTests.m; sourceTree = "<group>"; };
 		24B5C4A719B8C5E000C5E96C /* LPLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPLocationManager.h; sourceTree = "<group>"; };
 		24B5C4A819B8C5E000C5E96C /* LPLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLocationManager.m; sourceTree = "<group>"; };
+		24B5C4AA19B95D4A00C5E96C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		24B5C4AC19B95D6F00C5E96C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		24B5C4AE19B95D7700C5E96C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		24B5C4B019B95D7D00C5E96C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		24B5C4B219B95D8200C5E96C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		24B5C4B419B95D8B00C5E96C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +75,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B5C4B519B95D8B00C5E96C /* SystemConfiguration.framework in Frameworks */,
+				24B5C4B319B95D8200C5E96C /* Security.framework in Frameworks */,
+				24B5C4B119B95D7D00C5E96C /* CFNetwork.framework in Frameworks */,
+				24B5C4AF19B95D7700C5E96C /* libc++.dylib in Frameworks */,
+				24B5C4AD19B95D6F00C5E96C /* libicucore.dylib in Frameworks */,
 				24B5C47519B8C5B000C5E96C /* CoreGraphics.framework in Frameworks */,
 				24B5C47719B8C5B000C5E96C /* UIKit.framework in Frameworks */,
 				24B5C47319B8C5B000C5E96C /* Foundation.framework in Frameworks */,
+				24B5C4AB19B95D4A00C5E96C /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +122,12 @@
 		24B5C47119B8C5B000C5E96C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24B5C4B419B95D8B00C5E96C /* SystemConfiguration.framework */,
+				24B5C4B219B95D8200C5E96C /* Security.framework */,
+				24B5C4B019B95D7D00C5E96C /* CFNetwork.framework */,
+				24B5C4AE19B95D7700C5E96C /* libc++.dylib */,
+				24B5C4AC19B95D6F00C5E96C /* libicucore.dylib */,
+				24B5C4AA19B95D4A00C5E96C /* Firebase.framework */,
 				24B5C47219B8C5B000C5E96C /* Foundation.framework */,
 				24B5C47419B8C5B000C5E96C /* CoreGraphics.framework */,
 				24B5C47619B8C5B000C5E96C /* UIKit.framework */,
@@ -342,6 +366,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -373,6 +398,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -383,6 +409,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
 				INFOPLIST_FILE = "FindMyPhone/FindMyPhone-Info.plist";
@@ -396,6 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindMyPhone/FindMyPhone-Prefix.pch";
 				INFOPLIST_FILE = "FindMyPhone/FindMyPhone-Info.plist";
@@ -463,6 +497,7 @@
 				24B5C4A319B8C5B000C5E96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24B5C4A419B8C5B000C5E96C /* Build configuration list for PBXNativeTarget "FindMyPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +506,7 @@
 				24B5C4A619B8C5B000C5E96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
