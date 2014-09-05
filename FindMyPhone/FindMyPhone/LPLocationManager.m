@@ -7,9 +7,10 @@
 //
 
 #import "LPLocationManager.h"
-
+#import "LPDataStore.h"
 @interface LPLocationManager ()
 @property (readonly, nonatomic) NSArray *beaconRegions;
+@property (nonatomic, strong) LPDataStore *dataStore;
 @end
 
 @implementation LPLocationManager
@@ -19,6 +20,8 @@
 {
     self = [super init];
     if (self) {
+        self.dataStore = [[LPDataStore alloc] init];
+
         self.delegate = self;
         [self startMonitoringAndRanging];
     }
@@ -56,22 +59,20 @@
     return _beaconRegions;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
-{
-    if (state==CLRegionStateInside) {
-    }
-}
-
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     CLBeaconRegion *beaconRegion = (CLBeaconRegion *)region;
     NSLog(@"didEnterRegion: %@", beaconRegion);
+
+    [self.dataStore logEvent:@"didEnterRegion" withBeaconRegion:beaconRegion atTime:[NSDate date]];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
     CLBeaconRegion *beaconRegion = (CLBeaconRegion *)region;
     NSLog(@"didExitRegion: %@", beaconRegion);
+
+    [self.dataStore logEvent:@"didExitRegion" withBeaconRegion:beaconRegion atTime:[NSDate date]];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
@@ -81,6 +82,8 @@
 
     for (CLBeacon *beacon in filteredBeacons) {
         NSLog(@"didRangeBeacons: %@", beacon);
+
+        [self.dataStore logEvent:@"didRangeBeacons" withBeacon:beacon atTime:[NSDate date]];
     }
 }
 
