@@ -85,10 +85,18 @@
     NSArray *filteredBeacons = beacons;
     filteredBeacons = [self filterByKnownProximities:beacons];
     NSArray *sorted = [self sortedByAccuracy:filteredBeacons];
+    CLBeacon *closet = [sorted firstObject];
+    if (closet) {
+        NSLog(@"didRangeBeacons: %@", closet);
+        [self.dataStore logEvent:@"didRangeBeacons" withBeacon:closet atTime:[NSDate date]];
+    }
 
-    if (sorted.count > 0) {
-        NSLog(@"didRangeBeacons: %@", [sorted firstObject]);
-        [self.dataStore logEvent:@"didRangeBeacons" withBeacon:[sorted firstObject] atTime:[NSDate date]];
+    // force a didExitRegion if we don't see it in sorted.
+    for (CLBeaconRegion *beaconRegion in self.beaconRegions) {
+        if (![closet.major isEqual:beaconRegion.major]) {
+            NSLog(@"didExitRegion (forced): %@", beaconRegion);
+            [self.dataStore logEvent:@"didExitRegion" withBeaconRegion:beaconRegion atTime:[NSDate date]];
+        }
     }
 }
 
