@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24B5C4C819B96D0900C5E96C"
-               BuildableName = "FindMyPhoneViewer.app"
+               BuildableName = "Viewer.app"
                BlueprintName = "FindMyPhoneViewer"
                ReferencedContainer = "container:FindMyPhoneViewer.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B5C4C819B96D0900C5E96C"
-            BuildableName = "FindMyPhoneViewer.app"
+            BuildableName = "Viewer.app"
             BlueprintName = "FindMyPhoneViewer"
             ReferencedContainer = "container:FindMyPhoneViewer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B5C4C819B96D0900C5E96C"
-            BuildableName = "FindMyPhoneViewer.app"
+            BuildableName = "Viewer.app"
             BlueprintName = "FindMyPhoneViewer"
             ReferencedContainer = "container:FindMyPhoneViewer.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24B5C4C819B96D0900C5E96C"
-            BuildableName = "FindMyPhoneViewer.app"
+            BuildableName = "Viewer.app"
             BlueprintName = "FindMyPhoneViewer"
             ReferencedContainer = "container:FindMyPhoneViewer.xcodeproj">
          </BuildableReference>
