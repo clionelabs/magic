@@ -37,12 +37,16 @@
     }
     NSLog(@"startMonitoring: %@", self.monitoredRegions);
 
-    for (CLBeaconRegion *region in self.beaconRegions) {
-        if (![self.rangedRegions containsObject:region]) {
-            [self startRangingBeaconsInRegion:region];
-        }
-    }
+    [self startRanging];
     NSLog(@"startRanging: %@", self.rangedRegions);
+}
+
+- (void)startRanging
+{
+    // Only range the generic one.
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"A2DCA1E4-0607-4F37-9FF1-825237B278FE"];
+    CLBeaconRegion *generic = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"generic"];
+    [self startRangingBeaconsInRegion:generic];
 }
 
 - (NSArray *)beaconRegions
@@ -77,13 +81,14 @@
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
+    // Sort the beacons by proximity first and then accuracy.
     NSArray *filteredBeacons = beacons;
     filteredBeacons = [self filterByKnownProximities:beacons];
+    NSArray *sorted = [self sortedByAccuracy:filteredBeacons];
 
-    for (CLBeacon *beacon in filteredBeacons) {
-        NSLog(@"didRangeBeacons: %@", beacon);
-
-        [self.dataStore logEvent:@"didRangeBeacons" withBeacon:beacon atTime:[NSDate date]];
+    if (sorted.count > 0) {
+        NSLog(@"didRangeBeacons: %@", [sorted firstObject]);
+        [self.dataStore logEvent:@"didRangeBeacons" withBeacon:[sorted firstObject] atTime:[NSDate date]];
     }
 }
 
@@ -92,7 +97,17 @@
     // Don't send anything "far"
     NSArray *knownProximities = @[@(CLProximityImmediate), @(CLProximityNear)];
     NSPredicate *knownProximityPredicate = [NSPredicate predicateWithFormat:@"proximity IN %@", knownProximities];
-    return [beacons filteredArrayUsingPredicate:knownProximityPredicate];
+    NSPredicate *nonNegativeAccuracyPredicate = [NSPredicate predicateWithFormat:@"accuracy >= 0"];
+    NSPredicate *andPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[knownProximityPredicate, nonNegativeAccuracyPredicate]];
+    return [beacons filteredArrayUsingPredicate:andPredicate];
+}
+
+- (NSArray *)sortedByAccuracy:(NSArray *)beacons
+{
+    // Most accurate to least
+    return [beacons sortedArrayUsingComparator:^NSComparisonResult(CLBeacon *b1, CLBeacon *b2){
+        return (b1.accuracy > b2.accuracy);
+    }];
 }
 
 @end
