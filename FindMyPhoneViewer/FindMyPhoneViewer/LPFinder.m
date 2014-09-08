@@ -63,11 +63,8 @@
     // use last didEnterRegion event
     NSDictionary *event = snapshot.value;
     NSString *type = [event objectForKey:@"type"];
-    if ([type isEqualToString: @"didEnterRegion"] ||
-        [type isEqualToString: @"didExitRegion"]) {
-        NSString *identifier = [event objectForKey:@"identifier"];
-        [self updateLocation:identifier forType:type];
-    }
+    NSString *identifier = [event objectForKey:@"identifier"];
+    [self updateLocation:identifier forType:type];
 
     [self.buffer push:snapshot.value];
     [snapshot.ref removeValue];

@@ -66,11 +66,12 @@
 
     [self.identifierToLabels enumerateKeysAndObjectsUsingBlock:^(NSString *key, UILabel *label, BOOL *stop){
         if ([key isEqualToString:identifier]) {
-            if ([type isEqualToString:@"didEnterRegion"]) {
+            if ([type isEqualToString:@"didEnterRegion"] ||
+                [type isEqualToString:@"didRangeBeacons"]) {
                 [label setAlpha:1.0];
                 [label setHidden:NO];
 
-                // We just have one enter event. Grey out the others.
+                // We just have one enter or close ranging event. Grey out the others.
                 [self.identifierToLabels enumerateKeysAndObjectsUsingBlock:^(NSString *key2, UILabel *label2, BOOL *stop2){
                     if (![key2 isEqualToString:identifier]) {
                         [label2 setAlpha:0.2];
